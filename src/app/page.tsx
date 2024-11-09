@@ -1,101 +1,122 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import biryanphoto from "../../public/images/biryanui.jpg";
+import nihariphoto from "../../public/images/nihari.jpg";
+import haleemphoto from "../../public/images/haleem.jpg";
+import karahiphoto from "../../public/images/karahi.jpg";
+import ChapliKababphoto from "../../public/images/chaplikabab.jpg";
+import AlooKeemaphoto from "../../public/images/alookeema.jpg";
+import payaphoto from "../../public/images/paya.jpg";
+import daalchawalphoto from "../../public/images/daalchawal.jpg";
+import muttonkormaphoto from "../../public/images/muttonkorma.jpg";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    return (
+        <div className="home-container">
+            <h1 className="main-title">Delight in Every Bite</h1>
+            <p className="subtitle">Explore the authentic flavors of Pakistani cuisine</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="grid-container">
+                <div className="food-card biryani-card">
+                    <Image src={biryanphoto} alt="Biryani" className="food-image" />
+                    <h2 className="food-title">Biryani</h2>
+                    <p className="food-description">
+                        A fragrant rice dish layered with marinated meat, spices, and herbs. Karachi and Sindhi biryanis are especially popular.
+                    </p>
+                    <Link href="/Biryani">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card nihari-card">
+                    <Image src={nihariphoto} alt="Nihari" className="food-image" />
+                    <h2 className="food-title">Nihari</h2>
+                    <p className="food-description">
+                        A slow-cooked stew with tender meat and spices, often enjoyed with naan for a hearty breakfast.
+                    </p>
+                    <Link href="/Nihari">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card haleem-card">
+                    <Image src={haleemphoto} alt="Haleem" className="food-image" />
+                    <h2 className="food-title">Haleem</h2>
+                    <p className="food-description">
+                        A thick stew made from wheat, barley, and meat, cooked to a smooth, flavorful blend.
+                    </p>
+                    <Link href="/Haleem">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card karahi-card">
+                    <Image src={karahiphoto} alt="Karahi" className="food-image" />
+                    <h2 className="food-title">Karahi</h2>
+                    <p className="food-description">
+                        A tangy dish with chicken or mutton, tomatoes, green chilies, and spices cooked in a wok.
+                    </p>
+                    <Link href="/Karahi">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card chapli-kabab-card">
+                    <Image src={ChapliKababphoto} alt="Chapli Kabab" className="food-image" />
+                    <h2 className="food-title">Chapli Kabab</h2>
+                    <p className="food-description">
+                        A spicy minced meat patty, best served with naan or paratha.
+                    </p>
+                    <Link href="/ChapliKabab">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card aloo-keema-card">
+                    <Image src={AlooKeemaphoto} alt="Aloo Keema" className="food-image" />
+                    <h2 className="food-title">Aloo Keema</h2>
+                    <p className="food-description">
+                        Minced meat cooked with potatoes and spices, a household favorite with roti or naan.
+                    </p>
+                    <Link href="/AlooKeema">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card paya-card">
+                    <Image src={payaphoto} alt="Paya" className="food-image" />
+                    <h2 className="food-title">Paya</h2>
+                    <p className="food-description">
+                        A flavorful dish made with slow-cooked trotters, spices, and herbs, enjoyed with naan.
+                    </p>
+                    <Link href="/Paya">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card daal-chawal-card">
+                    <Image src={daalchawalphoto} alt="Daal Chawal" className="food-image" />
+                    <h2 className="food-title">Daal Chawal</h2>
+                    <p className="food-description">
+                        A classic combo of spiced lentils and rice, a simple yet wholesome meal.
+                    </p>
+                    <Link href="/Daalchawal">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+
+                <div className="food-card mutton-korma-card">
+                    <Image src={muttonkormaphoto} alt="Mutton Korma" className="food-image" />
+                    <h2 className="food-title">Mutton Korma</h2>
+                    <p className="food-description">
+                        A rich, creamy curry with tender mutton, slow-cooked with aromatic spices.
+                    </p>
+                    <Link href="/MuttonKorma">
+                        <button className="read-more-btn">Read More</button>
+                    </Link>
+                </div>
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
